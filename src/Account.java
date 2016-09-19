@@ -40,7 +40,7 @@ public class Account {
                     tripleInp.put(userUsed, 100, userPass);
                 }
             }else {
-                Account();
+                accounts();
             }
         }
     }
