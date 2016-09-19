@@ -30,4 +30,10 @@ public class tripleInp {
     Double getBal(Double balance){
         return balance;
     }
+
+    String getUser() {
+        return userName;
+    }
+
+
 }

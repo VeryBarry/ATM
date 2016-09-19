@@ -12,18 +12,17 @@ public class Account {
     Double depositMoney;
     Double balance;
     String userUsed;
-    String userName;
 
     Scanner scanner = new Scanner(System.in);
 
     static HashMap<String, tripleInp> accounts = new HashMap<>();
 
-    void accounts() {
+    String accounts() {
         System.out.print("Enter your username: ");
         userUsed = scanner.nextLine();
 
         if (tripleInp.containsKey(userUsed)) {
-           tripleInp.get(userUsed);
+           tripleInp.getUser(userUsed);
             atmOperations();
         }
         else {
@@ -37,7 +36,7 @@ public class Account {
                     System.out.print("Enter Password:");
                     String userPass = scanner.nextLine();
                     tripleInp account = new tripleInp(userUsed, 100.00, userPass);
-                    tripleInp.put(userUsed, 100, userPass);
+                    tripleInp.put(userUsed, 100, tripleInp.userPass);
                 }
             }else {
                 accounts();
