@@ -5,16 +5,18 @@ import java.util.Scanner;
  * Created by VeryBarry on 9/14/16.
  */
 public class ATM {
+    public static void main(String[] args){
+        System.out.println("Welcome. All your moneys are belong to us.");
+
+        Account.accounts();
+    }
 
 
 }
 
 
 
-//hashmap to store users
-//create account if username is wrong
 
-//only end if user "cancels"
 //option to delete account
 
 //loops back around after user is finished for other users to log in

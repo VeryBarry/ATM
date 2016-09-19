@@ -7,7 +7,6 @@ public class tripleInp {
     Double balance;
     String password;
 
-
     tripleInp(String userName, Double balance, String password) {
 
         setUser(userName);

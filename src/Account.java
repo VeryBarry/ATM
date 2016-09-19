@@ -14,46 +14,33 @@ public class Account {
     String userUsed;
     String userName;
 
-    public static Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
-    HashMap<String, tripleInp> account = new HashMap<>();
-
-    public static void main(String args) {
-
-        welcomeATM();
-        accounts();
-        atmOperations();
-
-        System.out.println("Have a nice day!");
-    }
-
-
-    void welcomeATM() {
-        System.out.println("Welcome. All your moneys are belong to us.");
-    }
+    static HashMap<String, tripleInp> accounts = new HashMap<>();
 
     void accounts() {
-
         System.out.print("Enter your username: ");
         userUsed = scanner.nextLine();
 
-        if (account.containsKey(userUsed)) {
-           account.get(userUsed);
+        if (tripleInp.containsKey(userUsed)) {
+           tripleInp.get(userUsed);
+            atmOperations();
         }
         else {
             System.out.println("That's not a valid User Name. Would you like to create one?");
             System.out.println("Press 1 for Yes, 2 for No.");
             int input = scanner.nextInt();
-            if (!account.containsKey(input)) {
-                account.put(userName, 0);
-                System.out.println("User name accepted.");
-                System.out.println("Now we just need a password.");
-                System.out.print("Enter Password:");
-                String userPass = scanner.nextLine();
-                //account.put(tripleInp.setPass);
-            }
-            else {
-                accounts();
+            if (input == 1) {
+                if (accounts.containsKey(1)) {
+                    System.out.println("User name accepted.");
+                    System.out.println("Now we just need a password.");
+                    System.out.print("Enter Password:");
+                    String userPass = scanner.nextLine();
+                    tripleInp account = new tripleInp(userUsed, 100.00, userPass);
+                    tripleInp.put(userUsed, 100, userPass);
+                }
+            }else {
+                Account();
             }
         }
     }
