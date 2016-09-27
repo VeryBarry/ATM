@@ -2,21 +2,13 @@
  * Created by VeryBarry on 9/16/16.
  */
 public class tripleInp {
-
     String userName;
     Double balance;
     String password;
 
-    tripleInp(String userName, Double balance, String password) {
-
-        setUser(userName);
+    tripleInp(String password,Double balance) {
         setBal(balance);
         setPass(password);
-    }
-
-    void setUser(String newUser) {
-        newUser = userName;
-
     }
 
     void setBal(Double userBal) {
@@ -30,10 +22,4 @@ public class tripleInp {
     Double getBal(Double balance){
         return balance;
     }
-
-    String getUser() {
-        return userName;
-    }
-
-
 }
