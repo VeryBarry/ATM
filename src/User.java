@@ -1,12 +1,11 @@
 /**
  * Created by VeryBarry on 9/16/16.
  */
-public class tripleInp {
-    String userName;
+public class User {
     Double balance;
     String password;
 
-    tripleInp(String password,Double balance) {
+    User(String password, Double balance) {
         setBal(balance);
         setPass(password);
     }

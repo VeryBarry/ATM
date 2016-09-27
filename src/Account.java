@@ -17,7 +17,7 @@ public class Account {
 
         Scanner scanner = new Scanner(System.in);
 
-        HashMap<String, tripleInp> accounts = new HashMap<>();
+        HashMap<String, User> accounts = new HashMap<>();
 
         System.out.println("Welcome. All your moneys are belong to us.");
 
@@ -37,14 +37,13 @@ public class Account {
                         System.out.println("Now we just need a password.");
                         System.out.print("Enter Password:");
                         String userPass = scanner.nextLine();
-                        tripleInp newAccount = new tripleInp(userPass, 100.00);
+                        User newAccount = new User(userPass, 100.00);
                         accounts.put(userUsed, newAccount);
                     }
                 }
             } else {
                 keepRunning = false;
             }
-
 
             boolean keepRunning2 = true;
             while (keepRunning2) {
@@ -53,15 +52,15 @@ public class Account {
                 System.out.println("You can: Deposit, Withdraw, Balance, or Cancel");
                 operation = scanner.nextLine();
                 if (operation.equalsIgnoreCase("balance")) {
-                    System.out.println(accounts.getBal);
+                    System.out.println(User.getBal);
                 }
                 if (operation.equalsIgnoreCase("withdraw")) {
                     System.out.println("You have $" + accounts.balance + ".");
                     System.out.println("How much would you like to withdraw?");
                     withdrawMoney = scanner.nextDouble();
-                    balance = accounts.balance - withdrawMoney;
+                    balance = User.getBal - withdrawMoney;
                     System.out.println("You now have: $" + balance);
-                    tripleInp.setBal(balance);
+                    User.setBal(balance);
                 }
                 if (operation.equalsIgnoreCase("deposit")) {
                     System.out.println("How much are you depositing?");
@@ -69,7 +68,7 @@ public class Account {
                     System.out.println("Depositing: $" + depositMoney);
                     balance = accounts.balance + depositMoney;
                     System.out.println("You now have: $" + balance);
-                    tripleInp.setBal(balance);
+                    User.setBal(balance);
                 }
                 if (operation.equalsIgnoreCase("cancel")) {
                     keepRunning2 = false;
